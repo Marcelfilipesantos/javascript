@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Identificador de Nacionalidade</h1>
+    <input type="text" value="Digite aqui o seu país." id="txtp">
+    <input type="button" value="VERFICAR" id="verificar" onclick="verificar()">
+    <div id="res"> </div>
+    <script>
+        function verificar() {
+      var país = document.querySelector('input#txtp')
+      var res = document.querySelector('div#res')
+      var nacionalidade = String(país.value)
+
+      res.innerHTML += `<p>Atualmente você vive no ${nacionalidade}.</p>`
+    }
+    </script>
+       
+    
+
+
+</body>
+</html>

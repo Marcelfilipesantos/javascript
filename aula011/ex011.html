@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em qual País você mora?</title>
+    <style>
+        body{
+            font: normal 20px arial;
+            background-color: rgba(168, 241, 217, 0.555);
+        }
+
+        input {
+            font: normal 15px arial;
+            width: auto;
+            height:auto;
+            border-radius: 10 10 10 10;
+        }
+        
+        div {
+            font:normal 18px arial;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é brasileiro?</h1>
+    <input type="text" value="digite aqui o seu pais" name="txtp" id="txtp" >
+    <input type="button" value="Verificar" onclick="verificar()"> 
+    <div id="res">
+
+    </div>
+
+    <script>
+      function verificar() {
+        var país = document.querySelector('input#txtp')
+        var res = document.querySelector('div#res')
+        var nacionalidade = String(país.value)
+        
+        res.innerHTML += `<p>Vivendo em <strong>${nacionalidade}</strong> </p>`
+
+        if(país != 'brasil') {
+            res.innerHTML += ('Você é <strong>Estrageiro</strong>') 
+        } else { res.innerHTML += ('Você é <strong>brasileiro</strong>') }
+
+
+      }
+     
+        
+       
+        
+    </script>
+</body>
+</html>
